@@ -1,0 +1,317 @@
+/* color variables for easier to remember names */
+:root {
+    --primary: #281ae8; 
+    --secondary: #b6b660; 
+    --pop: #333333; 
+}
+
+/* remove default CSS styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general settings for all body styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Changed to Roboto font */
+    color: var(--pop);
+    background-color: #ffffff; /* White background */
+}
+
+header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    color: var(--secondary);
+    font-size: 60px;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+
+header a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 8px;
+    font-size: 28px;
+    margin: 20px 20px 0 0;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 15px;
+}
+
+
+.hero {
+    background-image: url("/Images/header-image.jpg");
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero h2 {
+    font-size: 60px;
+    color: var(--primary);
+    font-weight: bold;
+}
+.hero p {
+    font-size: 30px;
+    color: var(--);
+    font-weight: bold;
+}
+
+.title {
+    border-right: 5px solid var(--secondary);
+    min-height: 100%;
+    text-align: right;
+    padding-right: 40px;
+    min-width: 20%;
+    max-width: 20%;
+}
+
+.title h2 {
+    font-size: 48px;
+}
+
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 30px;
+}
+
+.about-me p {
+    font-size: 20px;
+    padding: 0 30px;
+    line-height: 1.6;
+    width: 90%;
+}
+
+.my-work {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary);
+}
+
+.my-work h2 {
+    color: var(--secondary);
+}
+
+.projects-grid-wrapper {
+    width: 80%;
+    height: 1500px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-grid {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.project {
+    border: solid;
+    color: var(--pop);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+}
+
+.project:hover {
+    opacity: 1.2;
+}
+
+.JATE {
+    grid-column: 1/3;
+    grid-row: span 2;
+    background-image: url("../Images/calculator.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Adjusted size */
+}
+
+.password-generator {
+    background-image: url("../Images/password.jpg");
+    background-position: 50% 15%;
+    height: 100%; /* Adjusted size */
+}
+
+.weather-dashboard {
+    background-image: url("../Images/weather.jpg");
+    height: 100%; /* Adjusted size */
+}
+
+.planner {
+    background-image: url("../Images/project\ collab.jpg");
+    background-position: 60% 50%;
+    height: 100%; /* Adjusted size */
+}
+
+.note-taker {
+    background-image: url("../Images/Notebook.jpg");
+    height: 100%; /* Adjusted size */
+}
+
+.project-label {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.content-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-list {
+    width: 60%;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+footer ul li {
+    font-weight: bold;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    padding: 8px;
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .title h2 {
+        font-size: 35px;
+    }
+
+    .about-me p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    header {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    header nav ul {
+        min-height: 80px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .title {
+        border-bottom: 5px solid var(--secondary);
+        border-right: none;
+        text-align: center;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .about-me p {
+        font-size: 16px;
+        line-height: 1.6;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .my-work {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .projects-grid-wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .projects-grid {
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer ul {
+        flex-direction: column;
+    }
+
+    .content-wrapper {
+        width: 100%;
+    }
+
+    footer ul li {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
