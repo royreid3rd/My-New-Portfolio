@@ -63,7 +63,7 @@ header nav ul li a:hover {
 
 
 .hero {
-    background-image: url("/Images/header-image.jpg");
+    background-image: url("../Images/header-image.jpg");
     height: 600px;
     background-size: cover;
     background-position: center;
